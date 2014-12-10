@@ -1,7 +1,7 @@
 
 /**
  * Author: M. Adan
- * Assignment: Javascript Challenge 
+ * Assignment: Javascript Challenge / project 2
  * Date: December 2014
  */
 
@@ -11,8 +11,10 @@
 *                  *
 /................. */
 
+// strict mode makes it easier to write secure javascript
 "use strict"; 
 function getRelationship(x, y) {
+    
     // when x and y are not numbers
     if (isNaN(x) && isNaN(y)){
         return "Can't compare relationships because" + " " + x + " " + "and" +" " + y + " " + "are not numbers";
@@ -51,6 +53,14 @@ function getRelationship(x, y) {
     }
 }
 
+
+
+/* ................/
+*                  *
+*CHALLENGE # 2    *
+*                  *
+/................. */
+
 // earthlings
 var moonWalkers = [
   "Neil Armstrong",
@@ -68,11 +78,7 @@ var moonWalkers = [
 ];
 
 
-/* ................/
-*                  *
-*CHALLENGE # 2    *
-*                  *
-/................. */
+
 
 function alphabetizer(names) {
     // bucket for array
