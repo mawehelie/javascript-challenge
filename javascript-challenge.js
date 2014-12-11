@@ -7,7 +7,7 @@
 
 /* ................/
 *                  *
-*CHALLENGE # 1     *
+*CHALLENGE #1     *
 *                  *
 /................. */
 
@@ -91,7 +91,7 @@ console.log(getRelationship(NaN, undefined));
 
 /* ................/
 *                  *
-*CHALLENGE # 2    *
+*CHALLENGE #2    *
 *                  *
 /................. */
 
@@ -132,7 +132,7 @@ function alphabetizer(names) {
 
 /* ................/
 *                  *
-*CHALLENGE # 3     *
+*CHALLENGE #3     *
 *                  *
 /................. */
 
