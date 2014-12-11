@@ -19,19 +19,21 @@ var isNumeric = function(x,y){
 
     // when both y and x are  numbers and x > y
     if (x > y && !isNaN(x) && !isNaN(y)){
-    
-         return ">";
+      
+      return ">";
     
     }
+
     // compare and make sure it is a number
     else if (x < y && !isNaN(x) && !isNaN(y)){
-    
-          return "<";
+      
+      return "<";
     }
+
     // compare and make sure it is a number
     else if (x == y && !isNaN(x) && !isNaN(y)){
-    
-          return "=";
+      
+      return "=";
     }
     
 }; 
@@ -42,19 +44,19 @@ var notNumeric = function(x,y){
     if (isNaN(x) && isNaN(y)){
 
       // yell at the user 
-    return 'Can\'t compare relationships because" + " " + x + " " + "and" +" " + y + " " + "are not numbers';
+      return 'Can\'t compare relationships because' + ' ' + x + ' ' + 'and' + ' ' + y  +  '' + 'are not numbers';
   }
     // when x is not a number 
-  else if (isNaN(x)){
+    else if (isNaN(x)){
     
-    // error message 
-    return 'Can\'t compare relationships because" + " " + x + " " + "is not a number';
+      // error message 
+      return 'Can\'t compare relationships because' + ' ' + x + ' ' + 'is not a number';
   }
   
   else {
 
-    // error message 
-    return 'Can\'t compare relationships because" + " " + y + " " + "is not a number';
+      // error message 
+      return 'Can\'t compare relationships because' + ' ' + y + ' ' + 'is not a number';
   } 
  
  
@@ -64,7 +66,9 @@ function getRelationship(x, y) {
     
     // as long it is a number
     while(isNumeric(x,y)){
+      
       return isNumeric(x,y); 
+    
     }
   
   // when it is not a number
