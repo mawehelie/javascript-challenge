@@ -20,20 +20,20 @@ var isNumeric = function(x,y){
     // when both y and x are  numbers and x > y
     if (x > y && !isNaN(x) && !isNaN(y)){
       
-      return ">";
+      return '>';
     
     }
 
     // compare and make sure it is a number
     else if (x < y && !isNaN(x) && !isNaN(y)){
       
-      return "<";
+      return '<';
     }
 
     // compare and make sure it is a number
     else if (x == y && !isNaN(x) && !isNaN(y)){
       
-      return "=";
+      return '=';
     }
     
 }; 
@@ -177,7 +177,7 @@ function totalBytes(results) {
       var token = index.indexOf("Bytes");
       
       // check to see if token inside is not zero or less
-      if(token > 0) {
+      if (token  >  0) {
 
         // store parsed string which returns an integer
         bytes = parseInt(results.pageStats[index], 10);
@@ -186,6 +186,7 @@ function totalBytes(results) {
         sum += Number(bytes); 
 
       }
+
     }
 
     // return the total sum of bytes
