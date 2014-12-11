@@ -13,45 +13,75 @@
 
 // strict mode makes it easier to write secure javascript
 "use strict"; 
+
+// declare a function expression defined in the run-time
+var isNumeric = function(x,y){
+
+    // when both y and x are  numbers and x > y
+    if (x > y && !isNaN(x) && !isNaN(y)){
+    
+         return ">";
+    
+    }
+    // compare and make sure it is a number
+    else if (x < y && !isNaN(x) && !isNaN(y)){
+    
+          return "<";
+    }
+    // compare and make sure it is a number
+    else if (x == y && !isNaN(x) && !isNaN(y)){
+    
+          return "=";
+    }
+    
+}; 
+    
+// declare a function expression defined in the run-time
+var notNumeric = function(x,y){
+    // when x an y are not numbers 
+    if (isNaN(x) && isNaN(y)){
+
+      // yell at the user 
+    return 'Can\'t compare relationships because" + " " + x + " " + "and" +" " + y + " " + "are not numbers';
+  }
+    // when x is not a number 
+  else if (isNaN(x)){
+    
+    // error message 
+    return 'Can\'t compare relationships because" + " " + x + " " + "is not a number';
+  }
+  
+  else {
+
+    // error message 
+    return 'Can\'t compare relationships because" + " " + y + " " + "is not a number';
+  } 
+ 
+ 
+}
+// main function uses function expressions 
 function getRelationship(x, y) {
     
-    // when x and y are not numbers
-    if (isNaN(x) && isNaN(y)){
-        return "Can't compare relationships because" + " " + x + " " + "and" +" " + y + " " + "are not numbers";
+    // as long it is a number
+    while(isNumeric(x,y)){
+      return isNumeric(x,y); 
     }
-    // only when x is not a number
-    else if (isNaN(x)){
-        return "Can't compare relationships because" + " " + x + " " + "is not a number";
-    }
-    // only when y is not a number
-    else if (isNaN(y)){
-        return "Can't compare relationships because" + " " + y + " " + "is not a number";
-    }
+  
+  // when it is not a number
+  return notNumeric(x,y); 
 
-    // when x is less than y
-    else if (x < y){
-        return "<"; 
-    }
-    // x is greater than
-    else if (x > y){
-        return ">"; 
-    }
-    
-    // y is less than x 
-    else if (y < x){
-        return "<"; 
-    }
-
-    // y is greater than x
-    else if (y > x){
-        return ">"; 
-    }
-
-    // x and y are equal
-    else {
-        return "="; 
-    }
 }
+
+
+// Try logging these functions to test your code!
+console.log(getRelationship(1,4));
+console.log(getRelationship(1,1));
+console.log(getRelationship("that",2));
+console.log(getRelationship("this"," something else"));
+console.log(getRelationship(3));
+console.log(getRelationship("hi"));
+console.log(getRelationship(NaN));
+console.log(getRelationship(NaN, undefined));
 
 
 
@@ -87,9 +117,9 @@ function alphabetizer(names) {
     for (var name in names){
         // push every name into array, call some method(s) on it
         newArray.push(names[name].split(" ").reverse().join(", "));
-        //newArray.reverse();
        
     }
+
     // return sorted array
     return newArray.sort();
 }
@@ -120,11 +150,12 @@ function ruleList(results) {
     result.push(temp); 
 
 
-}
+    }
 
 // upon success return results array
 return result; 
-  }
+
+}
 
 // Iterate through pageStats in the psiResults object and 
 // return the total number of bytes to load the website.
